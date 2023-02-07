@@ -1,5 +1,12 @@
 const router = require("express").Router();
-router.get("/", (req,res)=>{
-    res.send("하이")
-})
+const User = require("../models/User")
+//update user
+/* router.put("/:id", async(req,res)=>{
+    if(req.body.userId)
+}) */
+//delete user
+//get a user
+//follow a user
+//unfollow a user
+
 module.exports = router
