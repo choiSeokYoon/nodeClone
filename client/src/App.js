@@ -1,20 +1,21 @@
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
-import Profile from "./pages/profile/Profile";
+import Profile from "./pages/profile/Profile.jsx"
 import Register from "./pages/register/Register";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import {Routes, Route} from 'react-router-dom'
+
 function App() {
-  <Router>
+  return (
+    <>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
+        <Route path='/profile/:username' element={<Profile/>}/>
+      </Routes>
+    </>
     
-      <Route path="/">
-        <Home/>
-      </Route>
-    
-  </Router>
+  )
 }
 
 export default App;
